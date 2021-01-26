@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheetsheet</title>
+    <!--------------------------------------------------------------------------------------------------------------------------------
+  --  prinsm.css
+  --------------------------------------------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="./prismJS/prism.css">
+
+    <!--------------------------------------------------------------------------------------------------------------------------------
+  --  Style CSS
+  --------------------------------------------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container logo">
+            <img src="./img/rocketDoc.png" alt="logo not found">
+            <h6>Cheet Sheet for fast coding<>
+            </h6>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <ol>
+            <li>
+                <h3><span class="num"></span> CSS Starter template-</h3>
+                <pre><code class="language-css">
+/*--------------------------------------------------------------------------------------------------
+-- Defaults
+--------------------------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+} 
+</code></pre>
+            </li>
+
+            <li>
+                <h3><span class="num"></span> Bootstrap variables-</h3>
+                <pre><code class="language-css">
+/*--------------------------------------------------------------------------------------------------
+-- Bootstrap Variables
+--------------------------------------------------------------------------------------------------*/
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+</code></pre>
+            </li>
+            <li>
+              <h3><span class="num"></span>Create Database and Table Schema Using Pymysql in Python </h3>
+              <pre><code class="language-css">import pymysql
+
+### create connection to mysql server
+conn = pymysql.connect(
+'localhost',
+'root',
+'Shivam123',
+port = 3360 ### Default Port = 3306
+)
+
+## Create cursor
+cur = conn.cursor()
+
+cur.execute('create database IF NOT EXISTS pythonlogin1')
+
+### Remember indentation is not allowed in sql query
+sql = "CREATE TABLE IF NOT EXISTS pythonlogin.accounts ( Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,name VARCHAR(300)
+NOT NULL,password VARCHAR(3000) NOT NULL,email VARCHAR(150)) "
+
+## Finally execute the query
+cur.execute(sql)
+</code></pre>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Page credit goes to "Lazzy_Programmer"
+    </footer>
+
+    <!--------------------------------------------------------------------------------------------------------------------------------
+  --  prism.js
+  --------------------------------------------------------------------------------------------------------------------------------->
+    <script src="./prismJS/prism.js"></script>
+
+</body>
+
+</html>

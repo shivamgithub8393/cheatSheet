@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------------------------------------------
+-- Defaults
+--------------------------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  background: #ccc;
+}
+
+/*--------------------------------------------------------------------------------------------------
+-- page styles
+--------------------------------------------------------------------------------------------------*/
+nav {
+  padding: .2em 0;
+  background: #272822;
+  color: #fff;
+  font-size: 3rem;
+  font-family: consolas;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 5rem;
+}
+
+.content {
+  margin-top: 3em;
+  font-family: consolas;
+}
+
+.content li {
+  margin-top: 3em;
+  background: #888;
+}
+
+.content li h3 {
+  padding: .5em .5em 0 .5em;
+}
+
+/*--------------------------------------------------------------------------------------------------
+-- Footer style
+--------------------------------------------------------------------------------------------------*/
+footer {
+  margin-top: 1em;
+  padding: .5em 0;
+  background: #272822;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: consolas;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------
+-- prism toolbar style editing
+--------------------------------------------------------------------------------------------------*/
+pre[class*="language-"] {
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.toolbar-item {
+  padding: .5em !important;
+}
+
+.toolbar-item button {
+  padding: .2em .8em !important;
+  border: 1px solid #fff !important; 
+  border-radius: 50px !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+}
+
+.toolbar-item button:hover {
+  color: #fff !important;
+}
