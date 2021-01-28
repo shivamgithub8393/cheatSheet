@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +14,12 @@
   --------------------------------------------------------------------------------------------------------------------------------->
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
     <nav>
         <div class="container logo">
             <img src="./img/rocketDoc.png" alt="logo not found">
-            <h6>Cheet Sheet for fast coding<>
-            </h6>
+            <h6>Cheet Sheet for saving lots of time<></h6>
         </div>
     </nav>
 
@@ -87,8 +84,44 @@
 </code></pre>
             </li>
             <li>
+              <h3><span class="num"></span> fetch API github prototype with link-</h3>
+<pre><code class="language-js">
+//--------------------------------------------------------------------------------------------------
+// fetch API prototype
+//--------------------------------------------------------------------------------------------------
+fetch('url')  // Default request method is GET
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+
+
+// request prototype with POST method
+fetch('url', {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-Type": "application/json"
+  },
+  credentials: "same-origin"
+})
+  .then(function(response) {
+    response.status     //=> number 100–599
+    response.statusText //=> String
+    response.headers    //=> Headers
+    response.url        //=> String
+
+    return response.text()
+  }, function(error) {
+    error.message //=> String
+  })
+
+// link to github documentation- https://github.github.io/fetch/
+</code></pre>
+            </li>
+            <li>
               <h3><span class="num"></span>Create Database and Table Schema Using Pymysql in Python </h3>
-              <pre><code class="language-css">import pymysql
+              <pre><code class="language-css">
+import pymysql
 
 ### create connection to mysql server
 conn = pymysql.connect(
@@ -111,6 +144,16 @@ NOT NULL,password VARCHAR(3000) NOT NULL,email VARCHAR(150)) "
 cur.execute(sql)
 </code></pre>
             </li>
+
+            <li>
+              <h3><span class="num"></span> CSS Starter template-</h3>
+              <pre><code class="language-css">
+/*--------------------------------------------------------------------------------------------------
+-- CMD command to Hide password
+--------------------------------------------------------------------------------------------------*/
+copy /b img_name.extension + file_name.txt new_file_name.same_extension
+</code></pre>
+            </li>
         </ol>
     </div>
 
@@ -123,6 +166,20 @@ cur.execute(sql)
   --  prism.js
   --------------------------------------------------------------------------------------------------------------------------------->
     <script src="./prismJS/prism.js"></script>
+
+    <script>
+      // Showing the number of elements
+      document.addEventListener('DOMContentLoaded', () => {
+
+        const numSpans = document.querySelectorAll('.num');
+        let counter = 0;
+
+        numSpans.forEach(i => {
+          i.innerHTML = ++counter + ".";
+        });
+
+      });
+    </script>
 
 </body>
 
