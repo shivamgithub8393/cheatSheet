@@ -154,6 +154,21 @@ cur.execute(sql)
 copy /b img_name.extension + file_name.txt new_file_name.same_extension
 </code></pre>
             </li>
+            <li>
+              <h3><span class="num"></span>Creating a simple Flask App</h3>
+<pre><code class="language-css">
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+return 'Hello, World!'
+
+if __name__ == '__main__':
+  app.run()
+</code></pre>
+            </li>
         </ol>
     </div>
 
