@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheetsheet</title>
-    <!--------------------------------------------------------------------------------------------------------------------------------
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheetsheet</title>
+  <!--------------------------------------------------------------------------------------------------------------------------------
   --  prinsm.css
   --------------------------------------------------------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="./prismJS/prism.css">
+  <link rel="stylesheet" href="./prismJS/prism.css">
 
-    <!--------------------------------------------------------------------------------------------------------------------------------
+  <!--------------------------------------------------------------------------------------------------------------------------------
   --  Style CSS
   --------------------------------------------------------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-    <nav>
-        <div class="container logo">
-            <img src="./img/rocketDoc.png" alt="logo not found">
-            <h6>Cheet Sheet for fast coding <></h6>
-        </div>
-    </nav>
+  <nav>
+    <div class="container logo">
+      <img src="./img/rocketDoc.png" alt="logo not found">
+      <h6>Cheet Sheet for fast coding <>
+      </h6>
+    </div>
+  </nav>
 
-    <div class="container content">
-        <ol>
-            <li>
-                <h3><span class="num"></span> CSS Starter template-</h3>
-                <pre><code class="language-css">
+  <div class="container content">
+    <ol>
+
+
+      <li>
+        <h3><span class="num"></span> CSS Starter template-</h3>
+        <pre><code class="language-css">
 /*--------------------------------------------------------------------------------------------------
 -- Defaults
 --------------------------------------------------------------------------------------------------*/
@@ -43,11 +48,13 @@
   margin: 0 auto;
 } 
 </code></pre>
-            </li>
+      </li>
 
-            <li>
-                <h3><span class="num"></span> Bootstrap variables-</h3>
-                <pre><code class="language-css">
+
+
+      <li>
+        <h3><span class="num"></span> Bootstrap variables-</h3>
+        <pre><code class="language-css">
 /*--------------------------------------------------------------------------------------------------
 -- Bootstrap Variables
 --------------------------------------------------------------------------------------------------*/
@@ -82,45 +89,102 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 </code></pre>
-            </li>
-            <li>
-              <h3><span class="num"></span> fetch API github prototype with link-</h3>
-<pre><code class="language-js">
+      </li>
+
+      <li>
+        <h3><span class="num"></span>React JS</h3>
+        <pre><code class="language-js">
 //--------------------------------------------------------------------------------------------------
-// fetch API prototype
+// Create Routes using "react-router-dom
 //--------------------------------------------------------------------------------------------------
-fetch('url')  // Default request method is GET
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(error => console.log(error));
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
-
-// request prototype with POST method
-fetch('url', {
-  method: "POST",
-  body: JSON.stringify(data),
-  headers: {
-    "Content-Type": "application/json"
-  },
-  credentials: "same-origin"
-})
-  .then(function(response) {
-    response.status     //=> number 100–599
-    response.statusText //=> String
-    response.headers    //=> Headers
-    response.url        //=> String
-
-    return response.text()
-  }, function(error) {
-    error.message //=> String
-  })
-
-// link to github documentation- https://github.github.io/fetch/
+function App() {
+return (
+&lt;Router&gt;
+  &lt;div&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;Link to="/"&gt;Home&lt;/Link&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;Link to="/about"&gt;About&lt;/Link&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;Link to="/users"&gt;Users&lt;/Link&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    {/* A &lt;Switch&gt; looks through its children &lt;Route&gt;s and
+                    renders the first one that matches the current URL. */}
+    &lt;Switch&gt;
+      &lt;Route exact path="/"&gt; {/* exact is used for check exactly same path */}
+        &lt;Home /&gt;
+      &lt;/Route&gt;
+      &lt;Route path="/about"&gt;
+        &lt;About /&gt;
+      &lt;/Route&gt;
+      &lt;Route path="/users"&gt;
+        &lt;Users /&gt;
+      &lt;/Route&gt;
+    &lt;/Switch&gt;
+  &lt;/div&gt;
+&lt;/Router&gt;
+);
+}
+const Home = () =&gt; {
+  return &lt;h2&gt;Home&lt;/h2&gt;
+}
+const About = () =&gt; {
+  return &lt;h2&gt;About&lt;/h2&gt;
+}
+const Users = () =&gt; {
+  return &lt;h2&gt;Users&lt;/h2&gt;
+}
+            
+export default App;
 </code></pre>
-            </li>
-            <li>
-              <h3><span class="num"></span>Create Database and Table Schema Using Pymysql in Python </h3>
-              <pre><code class="language-css">
+      </li>
+
+
+
+      <li>
+        <h3><span class="num"></span> React JS</h3>
+        <pre><code class="language-js">
+//--------------------------------------------------------------------------------------------------
+//  Fetch json data from api/json server
+//--------------------------------------------------------------------------------------------------
+fetch("URL")
+.then(response => {
+return response.json()
+})
+.then(data => {
+console.log(data)
+})
+.catch(err => console.log(err.message)) // Checking of any type of network error
+</code></pre>
+      </li>
+
+
+
+      <li>
+        <h3><span class="num"></span> React JS</h3>
+        <pre><code class="language-js">
+//--------------------------------------------------------------------------------------------------
+// UseState Hook
+//--------------------------------------------------------------------------------------------------
+const [state, setstate] = useState(initialState)
+
+// To update/change name
+setState(updateState)
+</code></pre>
+      </li>
+
+
+      <li>
+        <h3><span class="num"></span>Create Database and Table Schema Using Pymysql in Python </h3>
+        <pre><code class="language-css">
 import pymysql
 
 ### create connection to mysql server
@@ -143,20 +207,25 @@ NOT NULL,password VARCHAR(3000) NOT NULL,email VARCHAR(150)) "
 ## Finally execute the query
 cur.execute(sql)
 </code></pre>
-            </li>
+      </li>
 
-            <li>
-              <h3><span class="num"></span> CSS Starter template-</h3>
-              <pre><code class="language-css">
+
+
+      <li>
+        <h3><span class="num"></span> CSS Starter template-</h3>
+        <pre><code class="language-css">
 /*--------------------------------------------------------------------------------------------------
 -- command to merge .txt file with image
 --------------------------------------------------------------------------------------------------*/
 copy /b img_name.extension + file_name.txt new_file_name.same_extension
 </code></pre>
-            </li>
-            <li>
-              <h3><span class="num"></span>Creating a simple Flask App</h3>
-<pre><code class="language-css">
+      </li>
+
+
+
+      <li>
+        <h3><span class="num"></span>Creating a simple Flask App</h3>
+        <pre><code class="language-css">
 from flask import Flask
 
 app = Flask(__name__)
@@ -168,33 +237,35 @@ return 'Hello, World!'
 if __name__ == '__main__':
   app.run()
 </code></pre>
-            </li>
-        </ol>
-    </div>
+      </li>
 
-    <!-- Footer -->
-    <footer>
-        Page credit goes to "Lazzy_Programmer"
-    </footer>
 
-    <!--------------------------------------------------------------------------------------------------------------------------------
+    </ol>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Page credit goes to "Lazzy_Programmer"
+  </footer>
+
+  <!--------------------------------------------------------------------------------------------------------------------------------
   --  prism.js
   --------------------------------------------------------------------------------------------------------------------------------->
-    <script src="./prismJS/prism.js"></script>
+  <script src="./prismJS/prism.js"></script>
 
-    <script>
-      // Showing the number of elements
-      document.addEventListener('DOMContentLoaded', () => {
+  <script>
+    // Showing the number of elements
+    document.addEventListener('DOMContentLoaded', () => {
 
-        const numSpans = document.querySelectorAll('.num');
-        let counter = 0;
+      const numSpans = document.querySelectorAll('.num');
+      let counter = 0;
 
-        numSpans.forEach(i => {
-          i.innerHTML = ++counter + ".";
-        });
-
+      numSpans.forEach(i => {
+        i.innerHTML = ++counter + ".";
       });
-    </script>
+
+    });
+  </script>
 
 </body>
 
